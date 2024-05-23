@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::post('/gambar/simpanGambar', [GambarController::class, 'simpanGambar']);
+Route::get('/gambar/tampil', [GambarController::class, 'tampilGambar']);

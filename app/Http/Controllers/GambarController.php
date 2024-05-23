@@ -16,7 +16,11 @@ class GambarController extends Controller
             $fileName = $request->file('gambar')->hashName();
             $path = Storage::disk('public')->putFileAs($folder, $request->file('gambar'), $fileName);
 
-            return "Gambar berhasil di unggah! <br>Lokasi penyimpanan $path dengan nama file $fileName";
+            return "Gambar berhasil di unggah! <br>Lokasi penyimpanan <b>$path</b><br> Dengan nama file <b>$fileName</b><hr><center><a href='/gambar/tampil'>Tampilkan Gambar</a></center>";
         }
+    }
+
+    public function tampilGambar() {
+        return view('tampil');
     }
 }
